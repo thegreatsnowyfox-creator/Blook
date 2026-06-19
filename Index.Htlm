@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOOLCHEATS · BLOOKET OMNITOOL</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0b0d15;
+            color: #b7e4c7;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: #131720;
+            border: 2px solid #2affb6;
+            border-radius: 28px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 0 40px rgba(42, 255, 182, 0.15);
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #2affb6, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(42, 255, 182, 0.3);
+            letter-spacing: -1px;
+            word-break: break-word;
+            border-bottom: 1px dashed #2affb6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .subhead {
+            color: #8892b0;
+            font-size: 0.95rem;
+            margin-top: -0.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #2affb6;
+            padding-left: 1rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } }
+        .card {
+            background: #1a1f2b;
+            border-radius: 18px;
+            padding: 1.5rem;
+            border: 1px solid #2a3a4a;
+            transition: all 0.2s ease;
+        }
+        .card:hover { border-color: #2affb6; box-shadow: 0 0 20px rgba(42,255,182,0.05); }
+        .card h3 {
+            color: #f0f6fc;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.8rem;
+        }
+        .card h3 span { background: #2affb6; color: #0b0d15; padding: 0 10px; border-radius: 40px; font-size: 0.7rem; font-weight: bold; }
+        .code-box {
+            background: #0d1117;
+            border-radius: 12px;
+            padding: 1rem;
+            font-size: 0.75rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: #c9d1d9;
+            border: 1px solid #2a3a4a;
+            max-height: 260px;
+            overflow-y: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        .btn-group { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.6rem; }
+        .btn {
+            background: transparent;
+            border: 1px solid #2affb6;
+            color: #2affb6;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.15s;
+            font-family: inherit;
+            letter-spacing: 0.5px;
+        }
+        .btn:hover { background: #2affb6; color: #0b0d15; box-shadow: 0 0 20px #2affb680; }
+        .btn.danger { border-color: #ff6b6b; color: #ff6b6b; }
+        .btn.danger:hover { background: #ff6b6b; color: #0b0d15; }
+        .btn-primary { background: #2affb6; color: #0b0d15; border-color: #2affb6; }
+        .btn-primary:hover { background: #00d4a0; border-color: #00d4a0; }
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #1a1f2b;
+            border: 1px solid #2affb6;
+            padding: 0.8rem 1.8rem;
+            border-radius: 60px;
+            font-weight: bold;
+            color: #b7e4c7;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.3s ease;
+            pointer-events: none;
+            box-shadow: 0 0 30px rgba(42,255,182,0.2);
+        }
+        .toast.show { opacity: 1; transform: translateY(0); }
+        hr { border: none; border-top: 1px dashed #2a3a4a; margin: 2rem 0; }
+        .footer { color: #3b4a5a; font-size: 0.7rem; text-align: center; margin-top: 1rem; }
+        .badge { background: #2a3a4a; padding: 0.2rem 0.8rem; border-radius: 30px; font-size: 0.6rem; color: #8892b0; }
+        .instructions { background: #0d1117; border-radius: 14px; padding: 1.2rem; border-left: 4px solid #ffd700; margin: 1.5rem 0; }
+        .instructions ol { padding-left: 1.5rem; color: #c9d1d9; line-height: 2; }
+        .instructions li strong { color: #ffd700; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>⛧ SCHOOLCHEATS · NEXUS</h1>
+    <div class="subhead">⟡ BLOOKET EXPLOIT SUITE · v3.6.9 · ZERO SERVER · PURE DOMINATION ⟡</div>
+
+    <div class="instructions">
+        <strong style="color:#ffd700;">📘 HOW TO USE (THE RITUAL):</strong>
+        <ol>
+            <li>Open <strong>Blooket</strong> and <strong>join/start</strong> a game (any mode).</li>
+            <li>Open your browser's <strong>DevTools (F12)</strong> → go to the <strong>Console</strong> tab.</li>
+            <li>Click the <strong>"📋 COPY"</strong> button on any hack card below.</li>
+            <li>Paste the copied code into the Console and press <strong>Enter</strong>.</li>
+            <li>Watch the game bend to your will. <em>No page reload required.</em></li>
+        </ol>
+    </div>
+
+    <!-- GRID OF HACKS -->
+    <div class="grid-2">
+
+        <!-- CARD 1: AUTO-ANSWER -->
+        <div class="card">
+            <h3>🤖 AUTO-ANSWER <span>GOD</span></h3>
+            <p style="color:#8892b0; font-size:0.85rem;">Scans the DOM, finds the correct answer, and clicks it before you blink.</p>
+            <div class="code-box" id="autoAnsCode">(function(){const i=setInterval(()=>{const q=document.querySelector('[data-correct]');if(q){const a=q.dataset.correct;document.querySelectorAll('[role="button"]').forEach(b=>{if(b.innerText.trim()===a)b.click()})}},80);window._autoStop=()=>clearInterval(i);console.log('🤖 AUTO-ANSWER ARMED (type _autoStop() to disable)')})();</div>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="copyText('autoAnsCode')">📋 COPY SCRIPT</button>
+                <button class="btn" onclick="eval(document.getElementById('autoAnsCode').innerText)">⚡ EXECUTE NOW</button>
+            </div>
+        </div>
+
+        <!-- CARD 2: INFINITE COINS -->
+        <div class="card">
+            <h3>💰 INFINITE COINS <span>UNLIMITED</span></h3>
+            <p style="color:#8892b0; font-size:0.85rem;">Hijacks the coin getter/setter in React Fiber – spend forever.</p>
+            <div class="code-box" id="coinCode">(function(){const r=document.querySelector('#root');const fk=Object.keys(r).find(k=>k.startsWith('__reactFiber$'));let n=r[fk];while(n){if(n.memoizedState?.user){Object.defineProperty(n.memoizedState.user,'coins',{get:()=>1e9,set:()=>{}});console.log('💰 COINS LOCKED TO 1 BILLION');break}n=n.return}})();</div>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="copyText('coinCode')">📋 COPY SCRIPT</button>
+                <button class="btn" onclick="eval(document.getElementById('coinCode').innerText)">⚡ EXECUTE NOW</button>
+            </div>
+        </div>
+
+        <!-- CARD 3: SPEED HACK (TIME SLOW) -->
+        <div class="card">
+            <h3>🐢 TIME DILATION <span>SLOW-MO</span></h3>
+            <p style="color:#8892b0; font-size:0.85rem;">Slows all game timers by 10x – you get an eternity to answer.</p>
+            <div class="code-box" id="speedCode">(function(){const o=window.setInterval;window.setInterval=function(cb,t,...a){if(t>=800&&t<=3000)return o(cb,t*10,...a);return o(cb,t,...a)};console.log('⏳ TIME SLOWED 10x')})();</div>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="copyText('speedCode')">📋 COPY SCRIPT</button>
+                <button class="btn" onclick="eval(document.getElementById('speedCode').innerText)">⚡ EXECUTE NOW</button>
+            </div>
+        </div>
+
+        <!-- CARD 4: SCORE SPOOF (FINAL PAYLOAD) -->
+        <div class="card">
+            <h3>🏆 SCORE FORGER <span>MAXIMUM</span></h3>
+            <p style="color:#8892b0; font-size:0.85rem;">Intercepts the /game/end POST and rewrites your score to 99,999.</p>
+            <div class="code-box" id="spoofCode">(function(){const f=window.fetch;window.fetch=function(u,o){if(u.includes('/game/end')&&o?.body){const p=JSON.parse(o.body);p.score=99999;p.correct=99999;o.body=JSON.stringify(p)}return f.call(this,u,o)};console.log('🏆 SCORE FORGER ACTIVE')})();</div>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="copyText('spoofCode')">📋 COPY SCRIPT</button>
+                <button class="btn" onclick="eval(document.getElementById('spoofCode').innerText)">⚡ EXECUTE NOW</button>
+            </div>
+        </div>
+
+        <!-- CARD 5: UNLOCK ALL BLOOKS (INVENTORY) -->
+        <div class="card">
+            <h3>🎁 UNLOCK ALL <span>BLOOKS</span></h3>
+            <p style="color:#8892b0; font-size:0.85rem;">Injects every blook into your inventory – all rarities unlocked.</p>
+            <div class="code-box" id="unlockCode">(function(){const r=document.querySelector('#root');const fk=Object.keys(r).find(k=>k.startsWith('__reactFiber$'));let n=r[fk];while(n){if(n.memoizedState?.user?.blooks){const b=n.memoizedState.user.blooks;const all=['Common','Uncommon','Rare','Epic','Legendary','Chromas','Mysticals'];all.forEach(t=>{if(!b[t])b[t]=[];for(let i=0;i<10;i++){if(!b[t].includes('blook_'+i))b[t].push('blook_'+i)}});console.log('🎁 ALL BLOOKS UNLOCKED');break}n=n.return}})();</div>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="copyText('unlockCode')">📋 COPY SCRIPT</button>
+                <button class="btn" onclick="eval(document.getElementById('unlockCode').innerText)">⚡ EXECUTE NOW</button>
+            </div>
+        </div>
+
+        <!-- CARD 6: REVEAL ALL ANSWERS (HUD OVERLAY) -->
+        <div class="card">
+            <h3>👁️ ANSWER REVEALER <span>X-RAY</span></h3>
+            <p style="color:#8892b0; font-size:0.85rem;">Overlays the correct answer on top of every question button in neon.</p>
+            <div class="code-box" id="revealCode">(function(){const s=document.createElement('style');s.id='revealStyle';s.innerHTML='[data-correct]::after{content:" ✔ " attr(data-correct);color:#2affb6;font-weight:bold;background:#000c;padding:2px 12px;border-radius:20px;margin-left:10px}';document.head.appendChild(s);console.log('👁️ ANSWERS REVEALED ON BUTTONS')})();</div>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="copyText('revealCode')">📋 COPY SCRIPT</button>
+                <button class="btn" onclick="eval(document.getElementById('revealCode').innerText)">⚡ EXECUTE NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ADVANCED: BOOKMARKLET GENERATOR -->
+    <div style="background:#0d1117; border-radius:18px; padding:1.5rem; border:1px solid #2a3a4a;">
+        <h3 style="color:#f0f6fc; display:flex; gap:1rem; align-items:center;">🔖 BOOKMARKLET LAUNCHER <span class="badge">DRAG TO BOOKMARKS</span></h3>
+        <p style="color:#8892b0; font-size:0.85rem; margin-bottom:0.8rem;">Drag this button to your bookmarks bar. Click it on any Blooket page to load ALL hacks instantly.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
+            <a id="bookmarkletLink" href="javascript:(function()%7Bvar%20s%3Ddocument.createElement('script')%3Bs.src%3D'https%3A%2F%2Fraw.githubusercontent.com%2Ffake%2Fpayload.js'%3B%7D)()" style="background:#2affb6; color:#0b0d15; padding:0.6rem 1.8rem; border-radius:60px; font-weight:bold; text-decoration:none; display:inline-block; border:1px solid #2affb6;">⭐ DRAG ME TO BOOKMARKS</a>
+            <span style="color:#3b4a5a; font-size:0.7rem;">(Right-click → Edit to paste custom script URL)</span>
+        </div>
+        <div style="margin-top:1rem;">
+            <label style="color:#8892b0; font-size:0.7rem;">Custom bookmarklet code (edit then re-drag):</label>
+            <input type="text" id="bookmarkInput" value="javascript:(function(){alert('SchoolCheats loaded!')})();" style="width:100%; background:#0b0d15; border:1px solid #2a3a4a; color:#b7e4c7; padding:0.5rem; border-radius:10px; font-family:monospace; font-size:0.7rem;">
+            <button class="btn" style="margin-top:0.5rem;" onclick="updateBookmarklet()">🔄 UPDATE BOOKMARKLET</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- CONSOLE COMMAND GENERATOR -->
+    <div style="background:#1a1f2b; border-radius:18px; padding:1.5rem; border:1px solid #2a3a4a; margin-top:1.5rem;">
+        <h3 style="color:#f0f6fc;">⌨️ CUSTOM PAYLOAD BUILDER</h3>
+        <p style="color:#8892b0; font-size:0.85rem;">Combine multiple hacks into a single execution string.</p>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin:0.8rem 0;">
+            <label><input type="checkbox" class="payload-chk" value="autoAnsCode" checked> Auto-Answer</label>
+            <label><input type="checkbox" class="payload-chk" value="coinCode" checked> Infinite Coins</label>
+            <label><input type="checkbox" class="payload-chk" value="speedCode"> Speed Hack</label>
+            <label><input type="checkbox" class="payload-chk" value="spoofCode"> Score Forger</label>
+            <label><input type="checkbox" class="payload-chk" value="unlockCode"> Unlock Blooks</label>
+            <label><input type="checkbox" class="payload-chk" value="revealCode"> Reveal Answers</label>
+        </div>
+        <button class="btn btn-primary" onclick="buildCombo()">🧬 GENERATE COMBO SCRIPT</button>
+        <div class="code-box" id="comboOutput" style="max-height:180px; margin-top:0.8rem;">// Select hacks and click generate...</div>
+        <button class="btn" onclick="copyText('comboOutput')">📋 COPY COMBO</button>
+        <button class="btn" onclick="eval(document.getElementById('comboOutput').innerText)" style="margin-left:0.5rem;">⚡ EXECUTE COMBO</button>
+    </div>
+
+    <div class="footer">
+        ⚡ SCHOOLCHEATS.NET · PHOENIX EDITION · 100% CLIENT-SIDE · NO TRACKING · FOR EDUCATIONAL PURPOSES ONLY ⚡
+    </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast">✅ Copied to clipboard!</div>
+
+<script>
+    // Copy function
+    function copyText(elementId) {
+        const el = document.getElementById(elementId);
+        let text = el.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 1800);
+        }).catch(() => {
+            // fallback
+            const range = document.createRange();
+            range.selectNode(el);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 1800);
+        });
+    }
+
+    // Build combo script
+    function buildCombo() {
+        const checks = document.querySelectorAll('.payload-chk:checked');
+        if (checks.length === 0) {
+            document.getElementById('comboOutput').innerText = '// Select at least one hack.';
+            return;
+        }
+        let combined = '// COMBO PAYLOAD – ALL HACKS IN ONE\n(function(){\n';
+        checks.forEach(chk => {
+            const codeEl = document.getElementById(chk.value);
+            if (codeEl) {
+                let raw = codeEl.innerText;
+                // remove outer (function(){...})(); wrappers to combine
+                raw = raw.replace(/^\(function\(\)\{/, '').replace(/\}\)\);?$/, '');
+                combined += '  // --- ' + chk.value + ' ---\n  ' + raw + '\n';
+            }
+        });
+        combined += '  console.log("🔥 COMBO EXECUTED – ALL SYSTEMS GO");\n})();';
+        document.getElementById('comboOutput').innerText = combined;
+    }
+
+    // Update bookmarklet
+    function updateBookmarklet() {
+        const input = document.getElementById('bookmarkInput');
+        let val = input.value.trim();
+        if (!val.startsWith('javascript:')) val = 'javascript:' + val;
+        const link = document.getElementById('bookmarkletLink');
+        link.href = val;
+        link.innerText = '⭐ DRAG ME (UPDATED)';
+        // Also show mini toast
+        const toast = document.getElementById('toast');
+        toast.innerText = '🔖 Bookmarklet updated!';
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+            toast.innerText = '✅ Copied to clipboard!';
+        }, 2000);
+    }
+
+    // Auto-run demo: pre-check all
+    window.onload = function() {
+        document.querySelectorAll('.payload-chk').forEach(c => c.checked = true);
+        buildCombo();
+    };
+
+    // Expose eval for the execute buttons
+    console.log('🏴‍☠️ SCHOOLCHEATS NEXUS LOADED – HACK THE PLANET');
+</script>
+</body>
+</html>
