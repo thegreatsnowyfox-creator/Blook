@@ -1,336 +1,720 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCHOOLCHEATS · BLOOKET OMNITOOL</title>
+    <title>TMP Cheat Sheet - FULL</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background: #0b0d15;
-            color: #b7e4c7;
-            font-family: 'Courier New', 'Fira Code', monospace;
-            padding: 2rem 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            background: #131720;
-            border: 2px solid #2affb6;
-            border-radius: 28px;
-            padding: 2rem 2.5rem;
-            box-shadow: 0 0 40px rgba(42, 255, 182, 0.15);
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #2affb6, #00d4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(42, 255, 182, 0.3);
-            letter-spacing: -1px;
-            word-break: break-word;
-            border-bottom: 1px dashed #2affb6;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .subhead {
-            color: #8892b0;
-            font-size: 0.95rem;
-            margin-top: -0.5rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid #2affb6;
-            padding-left: 1rem;
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.8rem;
-            margin: 2rem 0;
-        }
-        @media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } }
-        .card {
-            background: #1a1f2b;
-            border-radius: 18px;
-            padding: 1.5rem;
-            border: 1px solid #2a3a4a;
-            transition: all 0.2s ease;
-        }
-        .card:hover { border-color: #2affb6; box-shadow: 0 0 20px rgba(42,255,182,0.05); }
-        .card h3 {
-            color: #f0f6fc;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            margin-bottom: 0.8rem;
-        }
-        .card h3 span { background: #2affb6; color: #0b0d15; padding: 0 10px; border-radius: 40px; font-size: 0.7rem; font-weight: bold; }
-        .code-box {
-            background: #0d1117;
-            border-radius: 12px;
-            padding: 1rem;
-            font-size: 0.75rem;
-            line-height: 1.6;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-break: break-all;
-            color: #c9d1d9;
-            border: 1px solid #2a3a4a;
-            max-height: 260px;
-            overflow-y: auto;
-            margin: 0.8rem 0;
-            font-family: 'Courier New', monospace;
-        }
-        .btn-group { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.6rem; }
-        .btn {
-            background: transparent;
-            border: 1px solid #2affb6;
-            color: #2affb6;
-            padding: 0.5rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: 0.15s;
-            font-family: inherit;
-            letter-spacing: 0.5px;
-        }
-        .btn:hover { background: #2affb6; color: #0b0d15; box-shadow: 0 0 20px #2affb680; }
-        .btn.danger { border-color: #ff6b6b; color: #ff6b6b; }
-        .btn.danger:hover { background: #ff6b6b; color: #0b0d15; }
-        .btn-primary { background: #2affb6; color: #0b0d15; border-color: #2affb6; }
-        .btn-primary:hover { background: #00d4a0; border-color: #00d4a0; }
-        .toast {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: #1a1f2b;
-            border: 1px solid #2affb6;
-            padding: 0.8rem 1.8rem;
-            border-radius: 60px;
-            font-weight: bold;
-            color: #b7e4c7;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: 0.3s ease;
-            pointer-events: none;
-            box-shadow: 0 0 30px rgba(42,255,182,0.2);
-        }
-        .toast.show { opacity: 1; transform: translateY(0); }
-        hr { border: none; border-top: 1px dashed #2a3a4a; margin: 2rem 0; }
-        .footer { color: #3b4a5a; font-size: 0.7rem; text-align: center; margin-top: 1rem; }
-        .badge { background: #2a3a4a; padding: 0.2rem 0.8rem; border-radius: 30px; font-size: 0.6rem; color: #8892b0; }
-        .instructions { background: #0d1117; border-radius: 14px; padding: 1.2rem; border-left: 4px solid #ffd700; margin: 1.5rem 0; }
-        .instructions ol { padding-left: 1.5rem; color: #c9d1d9; line-height: 2; }
-        .instructions li strong { color: #ffd700; }
+        * { box-sizing: border-box; }
+        body { background: #1a1a2e; font-family: -apple-system, sans-serif; padding: 16px; max-width: 600px; margin: 0 auto; color: #fff; }
+        h1 { font-size: 20px; color: #e94560; text-align: center; margin-bottom: 4px; }
+        .sub { text-align: center; color: #888; font-size: 12px; margin-bottom: 16px; }
+        input { width: 100%; padding: 12px; font-size: 16px; border-radius: 8px; border: 2px solid #333; background: #16213e; color: #fff; outline: none; }
+        input:focus { border-color: #e94560; }
+        .count { color: #666; font-size: 12px; margin: 8px 0; }
+        #results { margin-top: 12px; }
+        .result { background: #16213e; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid #e94560; }
+        .result .q { font-size: 13px; color: #ccc; }
+        .result .a { font-size: 15px; font-weight: bold; color: #4CAF50; margin-top: 4px; }
+        .result .a::before { content: "✔ "; }
+        .no-match { color: #666; text-align: center; padding: 20px; font-size: 14px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .clear-btn { background: #333; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; }
+        .stats { font-size: 11px; color: #555; text-align: center; margin-top: 16px; }
+        .badge { background: #e94560; color: #fff; border-radius: 12px; padding: 2px 10px; font-size: 11px; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>⛧ SCHOOLCHEATS · NEXUS</h1>
-    <div class="subhead">⟡ BLOOKET EXPLOIT SUITE · v3.6.9 · ZERO SERVER · PURE DOMINATION ⟡</div>
+<h1>🔍 TMP Cheat Sheet</h1>
+<div class="sub">Trivia Murder Party 2 • Full Dataset</div>
 
-    <div class="instructions">
-        <strong style="color:#ffd700;">📘 HOW TO USE (THE RITUAL):</strong>
-        <ol>
-            <li>Open <strong>Blooket</strong> and <strong>join/start</strong> a game (any mode).</li>
-            <li>Open your browser's <strong>DevTools (F12)</strong> → go to the <strong>Console</strong> tab.</li>
-            <li>Click the <strong>"📋 COPY"</strong> button on any hack card below.</li>
-            <li>Paste the copied code into the Console and press <strong>Enter</strong>.</li>
-            <li>Watch the game bend to your will. <em>No page reload required.</em></li>
-        </ol>
-    </div>
-
-    <!-- GRID OF HACKS -->
-    <div class="grid-2">
-
-        <!-- CARD 1: AUTO-ANSWER -->
-        <div class="card">
-            <h3>🤖 AUTO-ANSWER <span>GOD</span></h3>
-            <p style="color:#8892b0; font-size:0.85rem;">Scans the DOM, finds the correct answer, and clicks it before you blink.</p>
-            <div class="code-box" id="autoAnsCode">(function(){const i=setInterval(()=>{const q=document.querySelector('[data-correct]');if(q){const a=q.dataset.correct;document.querySelectorAll('[role="button"]').forEach(b=>{if(b.innerText.trim()===a)b.click()})}},80);window._autoStop=()=>clearInterval(i);console.log('🤖 AUTO-ANSWER ARMED (type _autoStop() to disable)')})();</div>
-            <div class="btn-group">
-                <button class="btn btn-primary" onclick="copyText('autoAnsCode')">📋 COPY SCRIPT</button>
-                <button class="btn" onclick="eval(document.getElementById('autoAnsCode').innerText)">⚡ EXECUTE NOW</button>
-            </div>
-        </div>
-
-        <!-- CARD 2: INFINITE COINS -->
-        <div class="card">
-            <h3>💰 INFINITE COINS <span>UNLIMITED</span></h3>
-            <p style="color:#8892b0; font-size:0.85rem;">Hijacks the coin getter/setter in React Fiber – spend forever.</p>
-            <div class="code-box" id="coinCode">(function(){const r=document.querySelector('#root');const fk=Object.keys(r).find(k=>k.startsWith('__reactFiber$'));let n=r[fk];while(n){if(n.memoizedState?.user){Object.defineProperty(n.memoizedState.user,'coins',{get:()=>1e9,set:()=>{}});console.log('💰 COINS LOCKED TO 1 BILLION');break}n=n.return}})();</div>
-            <div class="btn-group">
-                <button class="btn btn-primary" onclick="copyText('coinCode')">📋 COPY SCRIPT</button>
-                <button class="btn" onclick="eval(document.getElementById('coinCode').innerText)">⚡ EXECUTE NOW</button>
-            </div>
-        </div>
-
-        <!-- CARD 3: SPEED HACK (TIME SLOW) -->
-        <div class="card">
-            <h3>🐢 TIME DILATION <span>SLOW-MO</span></h3>
-            <p style="color:#8892b0; font-size:0.85rem;">Slows all game timers by 10x – you get an eternity to answer.</p>
-            <div class="code-box" id="speedCode">(function(){const o=window.setInterval;window.setInterval=function(cb,t,...a){if(t>=800&&t<=3000)return o(cb,t*10,...a);return o(cb,t,...a)};console.log('⏳ TIME SLOWED 10x')})();</div>
-            <div class="btn-group">
-                <button class="btn btn-primary" onclick="copyText('speedCode')">📋 COPY SCRIPT</button>
-                <button class="btn" onclick="eval(document.getElementById('speedCode').innerText)">⚡ EXECUTE NOW</button>
-            </div>
-        </div>
-
-        <!-- CARD 4: SCORE SPOOF (FINAL PAYLOAD) -->
-        <div class="card">
-            <h3>🏆 SCORE FORGER <span>MAXIMUM</span></h3>
-            <p style="color:#8892b0; font-size:0.85rem;">Intercepts the /game/end POST and rewrites your score to 99,999.</p>
-            <div class="code-box" id="spoofCode">(function(){const f=window.fetch;window.fetch=function(u,o){if(u.includes('/game/end')&&o?.body){const p=JSON.parse(o.body);p.score=99999;p.correct=99999;o.body=JSON.stringify(p)}return f.call(this,u,o)};console.log('🏆 SCORE FORGER ACTIVE')})();</div>
-            <div class="btn-group">
-                <button class="btn btn-primary" onclick="copyText('spoofCode')">📋 COPY SCRIPT</button>
-                <button class="btn" onclick="eval(document.getElementById('spoofCode').innerText)">⚡ EXECUTE NOW</button>
-            </div>
-        </div>
-
-        <!-- CARD 5: UNLOCK ALL BLOOKS (INVENTORY) -->
-        <div class="card">
-            <h3>🎁 UNLOCK ALL <span>BLOOKS</span></h3>
-            <p style="color:#8892b0; font-size:0.85rem;">Injects every blook into your inventory – all rarities unlocked.</p>
-            <div class="code-box" id="unlockCode">(function(){const r=document.querySelector('#root');const fk=Object.keys(r).find(k=>k.startsWith('__reactFiber$'));let n=r[fk];while(n){if(n.memoizedState?.user?.blooks){const b=n.memoizedState.user.blooks;const all=['Common','Uncommon','Rare','Epic','Legendary','Chromas','Mysticals'];all.forEach(t=>{if(!b[t])b[t]=[];for(let i=0;i<10;i++){if(!b[t].includes('blook_'+i))b[t].push('blook_'+i)}});console.log('🎁 ALL BLOOKS UNLOCKED');break}n=n.return}})();</div>
-            <div class="btn-group">
-                <button class="btn btn-primary" onclick="copyText('unlockCode')">📋 COPY SCRIPT</button>
-                <button class="btn" onclick="eval(document.getElementById('unlockCode').innerText)">⚡ EXECUTE NOW</button>
-            </div>
-        </div>
-
-        <!-- CARD 6: REVEAL ALL ANSWERS (HUD OVERLAY) -->
-        <div class="card">
-            <h3>👁️ ANSWER REVEALER <span>X-RAY</span></h3>
-            <p style="color:#8892b0; font-size:0.85rem;">Overlays the correct answer on top of every question button in neon.</p>
-            <div class="code-box" id="revealCode">(function(){const s=document.createElement('style');s.id='revealStyle';s.innerHTML='[data-correct]::after{content:" ✔ " attr(data-correct);color:#2affb6;font-weight:bold;background:#000c;padding:2px 12px;border-radius:20px;margin-left:10px}';document.head.appendChild(s);console.log('👁️ ANSWERS REVEALED ON BUTTONS')})();</div>
-            <div class="btn-group">
-                <button class="btn btn-primary" onclick="copyText('revealCode')">📋 COPY SCRIPT</button>
-                <button class="btn" onclick="eval(document.getElementById('revealCode').innerText)">⚡ EXECUTE NOW</button>
-            </div>
-        </div>
-    </div>
-
-    <hr>
-
-    <!-- ADVANCED: BOOKMARKLET GENERATOR -->
-    <div style="background:#0d1117; border-radius:18px; padding:1.5rem; border:1px solid #2a3a4a;">
-        <h3 style="color:#f0f6fc; display:flex; gap:1rem; align-items:center;">🔖 BOOKMARKLET LAUNCHER <span class="badge">DRAG TO BOOKMARKS</span></h3>
-        <p style="color:#8892b0; font-size:0.85rem; margin-bottom:0.8rem;">Drag this button to your bookmarks bar. Click it on any Blooket page to load ALL hacks instantly.</p>
-        <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
-            <a id="bookmarkletLink" href="javascript:(function()%7Bvar%20s%3Ddocument.createElement('script')%3Bs.src%3D'https%3A%2F%2Fraw.githubusercontent.com%2Ffake%2Fpayload.js'%3B%7D)()" style="background:#2affb6; color:#0b0d15; padding:0.6rem 1.8rem; border-radius:60px; font-weight:bold; text-decoration:none; display:inline-block; border:1px solid #2affb6;">⭐ DRAG ME TO BOOKMARKS</a>
-            <span style="color:#3b4a5a; font-size:0.7rem;">(Right-click → Edit to paste custom script URL)</span>
-        </div>
-        <div style="margin-top:1rem;">
-            <label style="color:#8892b0; font-size:0.7rem;">Custom bookmarklet code (edit then re-drag):</label>
-            <input type="text" id="bookmarkInput" value="javascript:(function(){alert('SchoolCheats loaded!')})();" style="width:100%; background:#0b0d15; border:1px solid #2a3a4a; color:#b7e4c7; padding:0.5rem; border-radius:10px; font-family:monospace; font-size:0.7rem;">
-            <button class="btn" style="margin-top:0.5rem;" onclick="updateBookmarklet()">🔄 UPDATE BOOKMARKLET</button>
-        </div>
-    </div>
-
-    <hr>
-
-    <!-- CONSOLE COMMAND GENERATOR -->
-    <div style="background:#1a1f2b; border-radius:18px; padding:1.5rem; border:1px solid #2a3a4a; margin-top:1.5rem;">
-        <h3 style="color:#f0f6fc;">⌨️ CUSTOM PAYLOAD BUILDER</h3>
-        <p style="color:#8892b0; font-size:0.85rem;">Combine multiple hacks into a single execution string.</p>
-        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin:0.8rem 0;">
-            <label><input type="checkbox" class="payload-chk" value="autoAnsCode" checked> Auto-Answer</label>
-            <label><input type="checkbox" class="payload-chk" value="coinCode" checked> Infinite Coins</label>
-            <label><input type="checkbox" class="payload-chk" value="speedCode"> Speed Hack</label>
-            <label><input type="checkbox" class="payload-chk" value="spoofCode"> Score Forger</label>
-            <label><input type="checkbox" class="payload-chk" value="unlockCode"> Unlock Blooks</label>
-            <label><input type="checkbox" class="payload-chk" value="revealCode"> Reveal Answers</label>
-        </div>
-        <button class="btn btn-primary" onclick="buildCombo()">🧬 GENERATE COMBO SCRIPT</button>
-        <div class="code-box" id="comboOutput" style="max-height:180px; margin-top:0.8rem;">// Select hacks and click generate...</div>
-        <button class="btn" onclick="copyText('comboOutput')">📋 COPY COMBO</button>
-        <button class="btn" onclick="eval(document.getElementById('comboOutput').innerText)" style="margin-left:0.5rem;">⚡ EXECUTE COMBO</button>
-    </div>
-
-    <div class="footer">
-        ⚡ SCHOOLCHEATS.NET · PHOENIX EDITION · 100% CLIENT-SIDE · NO TRACKING · FOR EDUCATIONAL PURPOSES ONLY ⚡
-    </div>
+<div class="top-bar">
+    <div class="count" id="count">Loading...</div>
+    <button class="clear-btn" onclick="clearSearch()">✕ Clear</button>
 </div>
 
-<!-- TOAST -->
-<div id="toast" class="toast">✅ Copied to clipboard!</div>
+<input id="searchInput" type="text" placeholder="Type question keyword..." oninput="search()" autofocus>
+
+<div id="results"></div>
+
+<div class="stats" id="stats"></div>
 
 <script>
-    // Copy function
-    function copyText(elementId) {
-        const el = document.getElementById(elementId);
-        let text = el.innerText;
-        navigator.clipboard.writeText(text).then(() => {
-            const toast = document.getElementById('toast');
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 1800);
-        }).catch(() => {
-            // fallback
-            const range = document.createRange();
-            range.selectNode(el);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-            document.execCommand('copy');
-            const toast = document.getElementById('toast');
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 1800);
-        });
-    }
+// ========================================
+// FULL DATASET - All questions from your list
+// Regular Questions I, II, III, IV + Final Round + Secret Endings
+// ========================================
+var questions = [
+    // === REGULAR QUESTIONS I ===
+    ["Rihanna shares 2 kids, RZA and Riot, with which rapper?", "A$AP Rocky"],
+    ["What's the name of the ship that got stuck in the Suez Canal in 2021", "The Ever Given"],
+    ["Which is NOT a line in Fatboy Slim's \"The Rockafeller Skank\"?", "my hairless mother"],
+    ["Who is Ted Lasso?", "Jason Sudeikis"],
+    ["Who was Spotify's most-streamed artist worldwide in 2020, 2021 and 2022?", "Bad Bunny"],
+    ["What did Elon Musk rename Twitter?", "X"],
+    ["Which is NOT a Marvel movie?", "Aquaman"],
+    ["Which celebrity does NOT play the flute?", "Cher"],
+    ["How many fingers do whales have hidden inside each flipper?", "5"],
+    ["Who is Nikola Jokic?", "A basketball player"],
+    ["Which is NOT a short story?", "\"The Waste Land\""],
+    ["Who declined a British knighthood?", "David Bowie"],
+    ["Which TV show is NOT based on a video game?", "The Boys"],
+    ["Which composer lived past 40?", "Beethoven"],
+    ["Which song does NOT feature French lyrics?", "Crocodile Rock"],
+    ["Who has been the New York Times crossword editor for over 30 years?", "Will Shortz"],
+    ["Who has NOT won an EGOT?", "Steven Spielberg"],
+    ["Which movie stars Jason Statham?", "Crank"],
+    ["Which city is home to the most-visited museum in the world?", "Paris"],
+    ["Which baseball player was nicknamed \"The Sultan of Swat\"?", "Babe Ruth"],
+    ["Who has the most Olympic gold medals?", "Michael Phelps"],
+    ["Which is NOT a real cookbook?", "Jacques Pepin Sings!"],
+    ["What does Austin Powers say?", "Oh, behave!"],
+    ["Which planet was NOT named after a Roman god?", "Earth"],
+    ["In Flo Rida's song \"Low,\" what is shawty wearing?", "Apple Bottom Jeans"],
+    ["Who is I. M. Pei?", "An architect"],
+    ["What dance was all the rage in the 1920s?", "The Charleston"],
+    ["Who has won a Heisman Trophy?", "Tim Tebow"],
+    ["Who is the longtime host of Survivor?", "Jeff Probst"],
+    ["What color is a horseshoe crab's blood?", "Blue"],
+    ["Who directed Madonna's iconic \"Vogue\" music video?", "David Fincher"],
+    ["Which is a real national anthem?", "\"La Marseillaise\""],
+    ["Which is NOT a real chess move?", "kingscaling"],
+    ["Who is NOT a silent film star?", "Clark Gable"],
+    ["How many double-sided stitches are on a regulation baseball?", "108"],
+    ["What were chainsaws originally invented to assist with?", "childbirth"],
+    ["The Last Waltz is a concert film about what band?", "The Band"],
+    ["If you want to make an affogato, what do you pour over a scoop of ice cream?", "espresso"],
+    ["Which of these is a prime number?", "97"],
+    ["How old is our universe?", "13.8 billion years old"],
+    ["Which Italian city is known as \"the Eternal City\"?", "Rome"],
+    ["If you order a California roll at a sushi restaurant, what are you getting?", "avocado"],
+    ["Which is NOT a real Real Housewives franchise?", "The Real Housewives of Ottawa"],
+    ["Who gets name-dropped in Billy Joel's 1989 song \"We Didn't Start the Fire\"?", "Malcom X"],
+    ["Nike shoes are named after the Greek goddess of what?", "victory"],
+    ["Which film is NOT blessed with a Matt Damon cameo?", "Fight Club"],
+    ["Whose music is NOT featured on the Voyager Golden Record?", "The Beatles"],
+    ["What is the geometric name for a 20-sided die?", "icosahedron"],
+    ["Who was born in the 1800s?", "Groucho Marx"],
+    ["On average, who or what would be the hardest to outrun?", "Category 1 hurricane"],
+    ["What color is an Aperol Spritz?", "Orange"],
+    ["Who is Marsha P. Johnson?", "an LGBTQ+ activist"],
+    ["Who's the tallest?", "Tom Cruise"],
+    ["What do you call a baby born on Leap Day?", "leaping"],
+    ["Which is NOT a real style of architecture?", "Domino"],
+    ["Who won her second Oscar for the song \"What Was I Made For?\"", "Billie Eilish"],
+    ["Which of your lovely little teeth are also known as your \"eyeteeth\"?", "canines"],
+    ["How many seasons were there of Keeping Up With The Kardashians?", "20"],
+    ["Who has NOT been linked romantically to Pete Davidson?", "Megan Fox"],
+    ["What kind of book focuses on the coming-of-age of a young person?", "Bildungsroman"],
+    ["Which of these movies does NOT have a big ol' twist ending?", "Alien"],
+    ["Which is a real kind of shoe?", "brogue"],
+    ["Which band was NOT part of the feminist-punk riot grrrl movement of the '90s?", "Pit Stank"],
+    ["Which is NOT a water sport?", "abseiling"],
+    ["\"Kitten Thinks Of Nothing But Murder All Day\" is from what satirical news website?", "The Onion"],
+    ["Who does NOT have an element in the periodic table named after them?", "Isaac Newton"],
+    ["I've got a wallet full of baht. Where can I spend it?", "Thailand"],
+    ["Which type of singing voice is the highest?", "mezzo-soprano"],
+    ["My gums hurt. Which cheese is the softest?", "chevre"],
+    ["The word \"Taser\" is an acronym for what?", "Tom A. Swift Electric Rifle"],
+    ["If I wanted to put on a blood-red fireworks show, what metal would I use?", "strontium"],
+    ["Which celebrity name is NOT a grammatically correct sentence?", "Kelsey Grammer"],
+    ["Which is NOT a circle of Hell in Dante's Inferno?", "envy"],
+    ["Which term describes a real phenomenon that swept Europe in the mid-1800s?", "Lisztomania"],
+    ["Which is NOT a real minigame in Trivia Murder Party 2?", "Snakes"],
+    ["Ariana Grande's 2024 album takes its name from which Jim Carrey movie?", "Eternal Sunshine of the Spotless Mind"],
+    ["According to Barbra Streisand, who are the luckiest people in the world?", "people who need people"],
+    ["What disease can be prevented with PrEP?", "HIV"],
+    ["In classical music, which kind of piece is traditionally performed by a full orchestra?", "concerto"],
+    ["Which of the following is NOT a deciduous tree?", "pine"],
+    ["Which board game lets you play as a top hat, thimble or boot?", "Monopoly"],
+    ["What gift is traditionally given to celebrities who have hosted SNL five times?", "jacket"],
+    ["What is the only bird that can fly backwards?", "hummingbird"],
+    ["Which word was added to the Merriam-Webster dictionary FIRST?", "glamping"],
+    ["On average, which sound is the loudest?", "fireworks"],
+    ["In 2023, which 81-year-old made history as Sports Illustrated's oldest cover model?", "Martha Stewart"],
+    ["Which wine bottle size is the largest?", "Nebuchadnezzar"],
+    ["Humans have 8 main blood types. How many do cows have?", "11"],
+    ["Let's make some mayonnaise! What do we NOT need?", "sour cream"],
+    ["What is The Tortured Poets Department?", "a Taylor Swift album"],
+    ["Six is an award-winning musical about whose historical wives?", "Henry VIII"],
+    ["Who was born Peter Gene Hernandez?", "Bruno Mars"],
+    ["Which of these is a fruit?", "cucumber"],
+    ["Who starred in Ratatouille?", "Patton Oswalt"],
+    ["How long was Liz Truss Prime Minister of the UK?", "44 days"],
+    ["Which child star turned 40 in 2020?", "Macaulay Culkin"],
+    ["What country do we have to thank for the invention of the gummy bear?", "Germany"],
+    ["What dark rock is formed by cooled volcanic lava?", "obsidian"],
+    ["What do male giraffes do to determine if a female is ready to mate?", "drink their urine"],
+    ["What's the area of expertise of a sommelier?", "wine"],
+    ["What's that metal thing shoe stores use for foot measurements?", "a Brannock Device"],
+    ["What will you see in the Arctic Circle during the summer solstice?", "complete sunlight"],
+    ["What is the dominant search engine in Russia?", "Yandex"],
+    ["Which shade of black is the blackest?", "Vantablack"],
+    ["Where could I find some formaldehyde for cheap?", "in an embalmed corpse"],
+    ["You call it \"jock itch.\" What's its scientific name?", "tinea cruris"],
+    ["The Komodo dragon is a type of...", "monitor lizard"],
+    ["What move is NOT part of a traditional burpee?", "a church"],
+    ["Which of these is a Netflix original series?", "Bridgerton"],
+    ["Which is NOT a real spinoff of RuPaul's Drag Race?", "RuPaul's Drag Olympics"],
+    ["Which of these is spineless?", "horseshoe crab"],
+    ["\"Whoever wins, we lose\" is the tagline to what horror flick?", "Alien vs. Predator"],
 
-    // Build combo script
-    function buildCombo() {
-        const checks = document.querySelectorAll('.payload-chk:checked');
-        if (checks.length === 0) {
-            document.getElementById('comboOutput').innerText = '// Select at least one hack.';
-            return;
+    // === REGULAR QUESTIONS II ===
+    ["Which company was the first to offer an athletic shoe designed specifically for women?", "Reebok"],
+    ["What would you call a baby llama?", "cria"],
+    ["Who is NOT one of those adorable little Minions?", "Floyd"],
+    ["Who famously popularized the phrase \"There are 3 kinds of lies: lies, damned lies, and statistics\"?", "Mark Twain"],
+    ["How many teeth does the average adult penguin have?", "0"],
+    ["What was the last Hollywood movie to be released on VHS?", "A History of Violence"],
+    ["Which fast-food burger joint first opened its doors in 1921?", "White Castle"],
+    ["What unit of time is a trillionth of a billionth of a second?", "zeptosecond"],
+    ["In Thailand, what color do widows traditionally wear to funerals?", "purple"],
+    ["Which food is traditionally eaten during the Jewish holiday of Passover?", "matza"],
+    ["Which basketball player holds the record for the most points scored in a single NBA game?", "Wilt Chamberlain"],
+    ["Who headlined the Grateful Dead revival group Dead & Company from 2015-2023?", "John Mayer"],
+    ["Who is the current mascot for Honey Smacks cereal?", "Dig 'Em Frog"],
+    ["In the painting The Birth of Venus, what does Venus use to cover her loins?", "her hair"],
+    ["Why were QR codes invented?", "to track auto parts"],
+    ["How would a little boy cry out for his father in the middle of the night... if he were Hungarian?", "Apa!"],
+    ["When did ballerinas switch from heeled shoes to ballet slippers?", "The French Revolution"],
+    ["Which of these is NOT a real scientific name for an animal?", "Limpus biscuit"],
+    ["Which continent has NONE of the top ten most populous cities in the world?", "Europe"],
+    ["Which is NOT a main ingredient in slime?", "bleach"],
+    ["After JFK died, who did his wife Jackie marry?", "a Greek shipping magnate"],
+    ["What is NOT one of the three major fingerprint pattern types?", "spiral"],
+    ["How many atoms are in a water molecule?", "3"],
+    ["What did Christopher Columbus mistake for a mermaid?", "a manatee"],
+    ["About how long is the Panama Canal?", "50 miles"],
+    ["Which chemical do people NOT inject into their face to make them youthful and gorgeous?", "hydrochloric acid"],
+    ["How many pawns are on a fully set-up chessboard?", "16"],
+    ["What is rocket?", "arugula"],
+    ["Which of these is NOT a pear?", "Hass"],
+    ["Which word does NOT appear in the Queen song \"Bohemian Rhapsody\"?", "giletto"],
+    ["Which of my bloody kitchen knives is curved upward?", "the scimitar knife"],
+    ["If I stabbed an ice pick in your eye, what would I hit first?", "my cornea"],
+    ["What is NPR's video series of in-office live music called?", "Tiny Desk Concerts"],
+    ["Which of these is NOT a law of thermodynamics?", "temperature decreases as matter decreases"],
+    ["Who has cement glands?", "barnacles"],
+    ["If I throw a rocking bachelor party for my dear friend in London, what's it called?", "a stag do"],
+    ["My pet bat just had babies! What do I call them?", "pups"],
+    ["What process causes a decomposing corpse to lose internal heat?", "algor mortis"],
+    ["What controversial psychological study of prison life took place in 1971?", "Stanford Prison Experiment"],
+    ["What's the French culinary term for having everything set up before you start cooking?", "mise en place"],
+    ["Who is the little red-haired girl that Charlie Brown adores?", "Heather"],
+    ["Which of these boxing weight classes is the lightest?", "Bantamweight"],
+    ["Which musical is the adaptation of the play Pygmalion?", "My Fair Lady"],
+    ["What musical features the song \"And I Am Telling You I'm Not Going\"?", "Dreamgirls"],
+    ["What has a bigger population than New York City?", "Cuba"],
+    ["What's another name for the foul-smelling titan arum?", "corpse flower"],
+    ["Where is the skyscraper the Burj Khalifa?", "Dubai"],
+    ["Which of the following is NOT something Rick Astley sang he's never gonna do?", "\"...pass you by...\""],
+    ["In theater terms, what is \"corpsing\"?", "breaking character by laughing"],
+    ["What part does H. Jon Benjamin play in Wet Hot American Summer?", "a can of vegetables"],
+    ["Who is the youngest Darling in Peter Pan?", "Michel"],
+    ["Which of my favorite movies is claymation?", "Chicken Run"],
+    ["What is rum made from?", "sugar"],
+    ["Which of these hands wins in a game of blackjack?", "a 10 and an Ace"],
+    ["Pick the Nicholas Sparks book where both romantic partners survive!", "The Choice"],
+    ["As of 2018, who has never won a World Cup?", "Mexico"],
+    ["Who has freaky rectangular pupils?", "goats"],
+    ["What do you call a group of alligators?", "a congregation"],
+    ["How does Emily Post say I should set a table?", "forks on the left, knives on the right"],
+    ["Since cyanide smells like almonds, I could easily hide it in....", "marzipan"],
+    ["Where can I find some sulfuric acid?", "in a car battery"],
+    ["Which of these instruments could I grab by the neck?", "lute"],
+    ["Which African nation touches the Indian Ocean?", "Tanzania"],
+    ["The International Space Station is about the same size as...", "an NFL football field"],
+    ["MCLXVI is what number in Roman numerals?", "1166"],
+    ["I need a bunch of drawers for hiding stuff. So I should get an antique....", "chiffonier"],
+    ["What is the root of suffering?", "from Latin sufferre"],
+    ["How do I sleep at night?", "blood pressure drops"],
+    ["Which of these Shakespeare plays does NOT have a ghost in it?", "Othello"],
+    ["What's lighter than air?", "methane"],
+    ["What was accidentally cut out of the painting The Last Supper due to damage?", "Jesus' feet"],
+    ["The plasma that surrounds the sun is known as the...", "Corona"],
+    ["What does the P in ESP stand for?", "perception"],
+    ["Which of these vegetables is technically a flower?", "broccoli"],
+    ["Where is Sam I Am NOT offered Green Eggs and Ham?", "at the park"],
+    ["In the Mother Goose poem, how many little piggies are there?", "5"],
+    ["Where was the first subway system?", "London"],
+    ["Which of these classic movies about strong, independent women features cannibalism?", "Fried Green Tomatoes"],
+    ["Which of these is NOT a Janelle Monae album?", "Sex Machina"],
+    ["How do you Dougie?", "Put your arms out front, lean side to side..."],
+    ["What is the hottest planet in our solar system?", "Venus"],
+    ["Whose army rediscovered the Rosetta Stone?", "Napoleon's"],
+    ["Bubble wrap was originally invented to be...", "wallpaper"],
+    ["Which of these would be \"boxcars\" in a game of craps?", "rolling twelve"],
+    ["Which of these movie monsters does NOT kill anybody?", "The Babadook"],
+    ["What does \"linguini\" mean in English?", "little tongues"],
+    ["\"Bovine\" means cows. What is \"ovine\"?", "sheep"],
+    ["What is the half-life of uranium-238?", "4.5 billion years"],
+    ["Where do I keep more than half of my bones?", "feet and hands"],
+    ["What's that weird flappy red thing on a turkey's neck called?", "a waddle"],
+    ["What's the name of the Salvador Dali painting with all those melty clocks?", "The Persistence of Memory"],
+    ["Who is Lisa Gherardini?", "the Mona Lisa model, probably..."],
+    ["Which mineral would hurt you the LEAST because it's the SOFTEST?", "calcite"],
+    ["Who is NOT in the Paw Patrol?", "Zoom"],
+    ["What figure skating move involves spinning your partner by the arm while they're low and parallel to the ice?", "the death spiral"],
+    ["What's in a zombie?", "rum"],
+    ["Where is Swahili NOT a national language?", "Sierra Leone"],
+    ["Who can NOT reproduce?", "two mules"],
+    ["Where is Manila?", "the Philippines"],
+    ["What's the main ingredient in shoofly pie?", "molasses"],
+    ["What does \"enervated\" mean?", "weakened"],
+    ["Which volcano destroyed Pompeii?", "Mount Vesuvius"],
+    ["What sports team is Jason Mendoza on The Good Place a superfan of?", "Jacksonville Jaguars"],
+    ["What was the first zero-calorie soda?", "No-Cal"],
+    ["When was Netflix founded?", "1997"],
+    ["Where is Amsterdam NOT?", "Scandinavia"],
+    ["What is Cardi B's first name?", "Belcalis"],
+    ["What does Amy Sedaris play on BoJack Horseman?", "a cat"],
+    ["Which of my saws requires a friend to help me operate it?", "whipsaw"],
+    ["It looks like a raccoon-rat thing and comes out at night, so it's gotta be the...", "aye-aye"],
+
+    // === REGULAR QUESTIONS III ===
+    ["What is a narrow strip of land that connects two bigger pieces of land, with water on either side?", "isthmus"],
+    ["When you scare a ladybug, what does it do?", "releases a stinky fluid from its joints"],
+    ["Teenage Mutant Ninja Turtles II:", "The Secret of the Ooze"],
+    ["How could I describe my favorite lead pipe?", "fistulous"],
+    ["If your Uber driver is en route and EN CROUTE, how will she arrive?", "wrapped in pastry"],
+    ["Which of these books did Gillian Flynn NOT write?", "Home Fire"],
+    ["Which letter does NOT appear on the periodic table of elements?", "J"],
+    ["Which actor directed A Quiet Place?", "Jim from The Office"],
+    ["Where does the Pixar movie Ratatouille take place?", "Paris"],
+    ["Which of these major city names is NOT outdated?", "Mumbai"],
+    ["Who was Ingmar Bergman?", "a Swedish director"],
+    ["Which member of the Sisterhood of the Travelling Pants is the sporty one?", "Bridget"],
+    ["What was the LAST line spoken in the movie Home Alone?", "Kevin! What did you do to my room?"],
+    ["Which of the following Orphan Black characters is NOT played by Tatiana Maslany?", "Delphine Cormier"],
+    ["Where was Irish Spring soap first introduced?", "Germany"],
+    ["What is Hong Kong's official name?", "Hong Kong Special Administrative Region of the People's Republic of China"],
+    ["Which of these is a non-vascular plant?", "moss"],
+    ["What type of pasta looks like a fancy bow tie?", "farfalle"],
+    ["What dish could be found at a Hungarian-Vietnamese fusion restaurant?", "goulash pho"],
+    ["What color is St. James Place on a standard Monopoly board?", "orange"],
+    ["According to The American Library Association, which book was the most challenged or banned in 2017?", "Thirteen Reasons Why"],
+    ["What is hummus?", "basically just chickpeas"],
+    ["Which of these Axe Body Spray scents did I just make up?", "Extra Dark"],
+    ["Which of the following does NOT have a jaw?", "lamprey"],
+    ["Who has NOT played the female lead in A Star Is Born?", "Liza Minnelli"],
+    ["Who solved The Secret of the Old Clock?", "Nancy Drew"],
+    ["What is the traditional order of a triathlon?", "swimming, biking, running"],
+    ["Which of the following is a species of sunflower?", "Jerusalem artichoke"],
+    ["What is Rihanna's last name?", "Fenty"],
+    ["Where is Tunisia?", "Africa"],
+    ["What does the \"J. J.\" in J. J. Abrams stand for?", "Jeffrey Jacob"],
+    ["Which of the following was written by Neil Gaiman?", "Coraline"],
+    ["Who was in the funny pages first?", "Blondie"],
+    ["What's the melting point of chocolate?", "about 90F"],
+    ["Which of these is 1 of the 8 Clown Commandments provided by Clowns of America International?", "I will never drink alcohol in clown makeup"],
+    ["How many Earths could fit inside the Sun?", "about 1.3 million"],
+    ["What has the most calories?", "a tbsp of olive oil"],
+    ["Which fruit in my gorgeous new breakfast bowl has the BIGGEST seed?", "coconut"],
+    ["What's a mudpuppy?", "a giant salamander"],
+    ["What does it mean if a statue is callipygian?", "It has a nice butt"],
+    ["Whose real name is Norville Rogers?", "Shaggy from Scooby-Doo"],
+    ["Why are brown eggs usually more expensive than white eggs?", "they're laid by bigger chickens"],
+    ["What do Scoville units measure?", "spiciness of peppers"],
+    ["How old is the moon?", "4.5 billion years old"],
+    ["What percentage of Earth's animal species are spineless?", "over 95%"],
+    ["Who's a French vampire?", "Lestat de Lioncourt"],
+    ["Which of these is a lizard?", "horned toad"],
+    ["Which Sharknado movie is also titled Global Swarming?", "the fifth one"],
+    ["Which of the following words was accidentally included in Webster's Dictionary for years, despite it not being a real word?", "dord"],
+    ["Where do peanuts grow?", "underground"],
+    ["What animal has the nickname \"blue flyer\"?", "a red kangaroo"],
+    ["Who helped the Grinch steal Christmas?", "a dog named Max"],
+    ["What's peppermint?", "a hybrid of spearmint & watermint"],
+    ["What weapon slays the Jabberwocky in Through the Looking-Glass?", "a vorpal sword"],
+    ["What does the banner that falls at the end of Jurassic Park say?", "WHEN DINOSAURS RULED THE EARTH"],
+    ["When was women's rugby introduced to the Olympics?", "2016"],
+    ["What were the three social classes among Vikings?", "karls, jarls, and thralls"],
+    ["The United Nations was founded after which war?", "World War II"],
+    ["Who would you NOT find on Mount Olympus?", "Neptune"],
+    ["Which of these is a real term for a part of a saxophone?", "tone hole"],
+    ["Who needs the LEAST amount of sleep?", "an elephant"],
+    ["When did police FIRST start keeping track of fingerprints?", "1900s"],
+    ["Who famously crooned, \"cut my life into pieces, this is my last resort\"?", "Papa Roach"],
+    ["How many shapes are there in Tetris?", "7"],
+    ["When were windshield wipers invented?", "the same year as flight"],
+    ["Who said, \"Where there is love there is life\"?", "Gandhi"],
+    ["What role did Ellen DeGeneres have in Finding Dory?", "a blue tang"],
+    ["How can I connect two pieces of rope?", "a sheet bend knot"],
+    ["Where does cinnamon come from?", "tree bark"],
+    ["If your plane gets lost in the Bermuda Triangle, where will you crash?", "in the Atlantic Ocean"],
+    ["My favorite yoga pose is standing up straight with my arms at my side. What's that called?", "Mountain Pose"],
+    ["What's at the top of Maslow's hierarchy of needs?", "self-actualization"],
+    ["How far can a rook travel in a single chess move?", "seven"],
+    ["Which cheese is traditionally made from cow milk?", "gruyere"],
+    ["What am I tasting in this snickerdoodle?", "cinnamon sugar"],
+    ["According to IMDb, which of these horror films has the smallest cast?", "Paranormal Activity"],
+    ["Botanically, which of these are berries?", "bananas"],
+    ["Where do you wear a circlet?", "on my head"],
+    ["If I wanted to get a small dog, what kind should I get?", "a chihuahua"],
+    ["What is the Mariana Trench shaped like?", "a crescent moon"],
+    ["Who NEVER successfully conquered Egypt?", "Genghis Khan"],
+    ["Which of these is the title of a Maya Angelou poem?", "Touched by an Angel"],
+    ["What is the rooster's dance to gain favor with the females called?", "tidbitting"],
+    ["What's inside a down comforter?", "feather"],
+    ["Who is the singer of \"It Ain't Me\"?", "It is Selena Gomez"],
+    ["When is American Thanksgiving?", "the fourth Thursday in November"],
+    ["Which of these countries has some mountains?", "Romania"],
+    ["How long is a marathon?", "26.2 miles"],
+    ["Who wears a tunic?", "The Jolly Green Giant"],
+    ["Where do sweet delicious marshmallows come from?", "the marshmallow herb"],
+    ["Which of these book sequels is NOT real?", "The Next Gatsby by F. Scott Fitzgerald"],
+    ["Who is NOT a puppet?", "Toby from Labyrinth"],
+    ["What is a primary ingredient of Worcestershire Sauce?", "dissolved fish"],
+    ["According to NASA, what are rain drops actually shaped like?", "hamburger buns"],
+    ["What's a shilling?", "12 pence"],
+    ["What's keeping you balanced?", "the vestibular system in my ear"],
+    ["What were jigsaw puzzles originally called?", "dissected maps"],
+    ["How many questions are in each edition of Trivial Pursuit?", "6000"],
+    ["A male cat is a Tom, but what is a female cat called?", "a Queen"],
+    ["If you searched your heart, what would you find?", "2 atria"],
+    ["Where would you find a My Little Pony's cutie mark?", "on their flank"],
+    ["Until 1990, what were Snickers candy bars called in the UK?", "Marathon Bars"],
+    ["What causes brain freeze?", "cold food on the roof of your mouth"],
+    ["What is the Sphinx mostly made of?", "limestone"],
+    ["Who's got the biggest brain?", "a sperm whale"],
+    ["What flavor are the purple Skittles in Ireland?", "black currant"],
+    ["Which of the following is NOT one of The 5 Love Languages according to author Gary Chapman?", "faithful devotion"],
+    ["What year did Jon Stewart host his final episode of The Daily Show?", "2015"],
+    ["What was the FIRST antibiotic to be discovered?", "penicillin"],
+    ["What is NOT spread by mosquitoes?", "lyme disease"],
+    ["What's that thing called where you involuntarily jolt yourself awake right as you're falling asleep?", "a hypnic jerk"],
+    ["Who makes pianos?", "Steinway"],
+
+    // === REGULAR QUESTIONS IV ===
+    ["What are football special teams for?", "kicks and kick returns"],
+    ["Which of these movies has g-g-g-ghosts in it?", "Ghost Town"],
+    ["Which of these spooky-sounding implements is a real tool?", "hex key"],
+    ["What do you call the electronic musical instrument that makes those \"ooo oooo ooo\" sounds?", "a theremin"],
+    ["What type of bridge is the current London Bridge?", "a box girder bridge"],
+    ["What has three hearts?", "an octopus"],
+    ["Who wrote The Brief Wondrous Life of Oscar Wao?", "Junot Diaz"],
+    ["Which of the following is NOT in an egg cream?", "egg"],
+    ["Which Spice Girl does NOT sing a solo line in \"Wannabe\"?", "Posh"],
+    ["What else is weird about the platypus?!?!", "It doesn't have a stomach"],
+    ["When was the first submarine attack?", "during the Revolutionary War"],
+    ["Which island's flag features a sinking ship?", "Bermuda"],
+    ["If you hit the dead center on a dartboard, how many points is it worth?", "50 points"],
+    ["What's a broomstick skirt?", "a long skirt with a wrinkled look"],
+    ["Who wrote my favorite quadrilogy about female friendship in Naples, Italy?", "Elena Ferrante"],
+    ["What was the first food eaten in space?", "applesauce"],
+    ["What is made by being flash-frozen in a bath of liquid nitrogen?", "Dippin' Dots"],
+    ["Who's the cat that won't cop out when there's danger all about?", "Shaft"],
+    ["Who are Scott and Mark Kelly?", "twin astronauts"],
+    ["Whose movies begin with a lion roaring?", "Metro-Goldwyn-Mayer films"],
+    ["Who is Hester Prynne's husband in The Scarlet Letter?", "Roger Chillingworth"],
+    ["What movie features the characters Meg Swan, Cookie Fleck and Harlan Pepper?", "Best in Show"],
+    ["What is a fungal disease that attacks corn?", "corn smut"],
+    ["What British TV show is Dancing with the Stars based on?", "Strictly Come Dancing"],
+    ["What does it mean to describe someone as milquetoast?", "they're timid"],
+    ["Whose real name is Elizabeth Woolridge Grant?", "Lana Del Rey"],
+    ["What does the V in \"V8 engine\" mean?", "the engine is shaped like a V"],
+    ["Which of the following was the 2018 Pantone Color of the Year?", "Ultra Violet"],
+    ["If winds are blowing at about 131-155 MPH, what do we have?", "a category 4 hurricane"],
+    ["Seriously... Who Framed Roger Rabbit?", "Judge Doom"],
+    ["Where is the oldest operating university in the world?", "Morocco"],
+    ["Which of these is a Vincent van Gogh painting?", "Skull of a Skeleton with Burning Cigarette"],
+    ["Which of these plants do NOT flower?", "a fern"],
+    ["What is the name of the gym co-founded by Tamra Judge from The Real Housewives of Orange County?", "CUT Fitness"],
+    ["How tall is each letter in the famous Hollywood sign in California?", "45 feet"],
+    ["According to People magazine, which was the first giant balloon to appear in the 1927 Macy's Thanksgiving Day Parade?", "Felix the Cat"],
+    ["Who did Prince Harry marry in 2018?", "Rachel Zane from Suits"],
+    ["What happens to the lovers at the end of Taylor Swift's \"Love Story\"?", "they get engaged"],
+    ["When life flips you upside down and drops you headfirst into the floor, what professional wrestling move is that?", "piledriver"],
+    ["What has the shortest wavelength?", "X-rays"],
+    ["When is Celsius the same as Fahrenheit?", "when it's -40"],
+    ["Which sword could I NOT bring to fencing practice?", "a claymore"],
+    ["What golf term means the same thing as a double birdie?", "an eagle"],
+    ["If I pushed your head into a honeybee hive, what would you NOT find?", "soldier bees"],
+    ["Which of the following films does NOT feature Daniel Craig as James Bond?", "GoldenEye"],
+    ["If I wanted to push you off the top of a tower, which would provide the longest fall?", "CN Tower"],
+    ["What is NOT in the original Dracula novel?", "Dracula is burned by sunlight"],
+    ["Which beach has the longest coastline?", "Ninety Mile Beach in Australia"],
+    ["What does Matt Damon's character grow on Mars in The Martian?", "potatoes"],
+    ["What does Harry Potter find in the Chamber of Secrets?", "a really big snake"],
+    ["What is Malta?", "its own country"],
+    ["Which birds have nostrils on the tip of their beaks?", "kiwis"],
+    ["The Large Hadron Collider is currently the biggest machine in the world. What's its circumference?", "17 miles"],
+    ["How big is the eye of a blue whale?", "like a grapefruit"],
+    ["How many lifeboats did the Titanic have?", "20"],
+    ["According to legend, who was taken away by fairies to heal in case England ever needs him again?", "King Arthur"],
+    ["What were Twinkies originally filled with?", "banana cream"],
+    ["Which sport is known as \"the sweet science\"?", "boxing"],
+    ["What do archaeologists believe killed King Tut?", "a broken leg"],
+    ["How old was Leslie Jones when she officially joined the cast of Saturday Night Live?", "47"],
+    ["Which of these is NOT a lyric from the song \"You're a Mean One, Mr. Grinch\"?", "You're as charming as moldy cheese"],
+    ["Who are Claudia, Kristy, Mary Anne and Stacey?", "The Baby-Sitters Club"],
+    ["Which of these is NOT one of Shaquille O'Neal's rap albums?", "Shaq Attaq"],
+    ["Who does NOT get name dropped in the song \"Baby Shark\"?", "Brother Shark"],
+    ["In Scotland, what's a loch?", "a lake"],
+    ["What's a vole?", "a small rodent"],
+    ["Which herb do you burn to rid your house of bad energy in a practice called \"smudging\"?", "sage"],
+    ["In Norse mythology, what will happen during Ragnarok?", "a wolf will eat the sun"],
+    ["What used to be known as the Sandwich Islands?", "the Hawaiian Islands"],
+    ["What does poison ivy look like?", "green with three leaves"],
+    ["Which plant grows the fastest?", "bamboo"],
+    ["Which planet has a solid surface?", "Venus"],
+    ["Which colorful book came first?", "The Red Badge of Courage"],
+    ["What do Sesame Street's Bert and Ernie wear?", "stripes"],
+    ["What do you get if you win Shirley Jackson's \"The Lottery\"?", "stoned to death"],
+    ["What's the name of the postal worker on Mister Rogers' Neighborhood and also Daniel Tiger's Neighborhood?", "Mister McFeely"],
+    ["What font is used on Cards Against Humanity cards?", "Helvetica Neue 75 Bold"],
+    ["What is the capital city of Canada?", "Ottawa"],
+    ["Which of these horror classics was published first?", "Frankenstein"],
+    ["Which country won the first FIFA World Cup in 1930?", "Uruguay"],
+    ["What color M&M was retired in 1995?", "tan"],
+    ["What is the symbol for the element sodium?", "Na"],
+    ["What brand's slogan is \"when it rains, it pours\"?", "Morton Salt"],
+    ["What's the title of Langston Hughes' famous poem that begins \"What happens to a dream deferred?\"", "Harlem"],
+    ["What international border runs across the peak of Mount Everest?", "Nepal and Tibet"],
+    ["Who fell into the Chocolate River and was sucked up the pipe in Charlie and the Chocolate Factory?", "Augustus Gloop"],
+    ["How old do you have to be to open a Facebook account?", "13"],
+    ["Which of these operas was written by Mozart?", "The Marriage of Figaro"],
+    ["Humans have seven vertebrae in their neck, but how many are in a giraffe's neck?", "seven"],
+    ["What color is the outside of a Jarrahdale pumpkin?", "greenish blue"],
+    ["On a Saturday night, how often do those Bellagio fountains in Las Vegas go off?", "after 8PM, every fifteen minutes"],
+    ["What do strong updrafts in storms cause?", "hail"],
+    ["What is NOT a part of a battery?", "moderator band"],
+    ["Which of these inventions did Thomas Edison patent first?", "the phonograph"],
+    ["Where was the tea bag invented?", "USA"],
+    ["How did the Headless Horseman lose his head?", "cannonball"],
+    ["Where would I find the carburetor on my 2006 Toyota Corolla?", "It doesn't have one. You've got fuel injection."],
+    ["Where do you get cut when they take out your appendix?", "lower right abdomen"],
+    ["Who is the main antagonist of The Nutcracker?", "The Mouse King"],
+    ["What turns the lady into a swan in Swan Lake?", "an evil sorcerer"],
+    ["What would you NOT find in a classic game of Hungry Hungry Hippos?", "a red hippo"],
+    ["What color is Percy the train in Thomas & Friends?", "green"],
+    ["What is the piggy bank's name in Toy Story?", "Hamm"],
+
+    // === FINAL ROUND CATEGORIES (as questions with answers) ===
+    ["Final Round: Tarot Cards", "The River Styx, The Shadowy One (plus more)"],
+    ["Final Round: Worn Around the Neck", "lei, foulard, fez (plus more)"],
+    ["Final Round: Hogwarts Professors", "Pomona Sprout, Agatha Harkness (plus more)"],
+    ["Final Round: London Tube Lines", "Jubilee Line, Metropolitan Line (plus more)"],
+    ["Final Round: Black Mirror Episodes", "\"The National Anthem\", \"Hang the DJ\" (plus more)"],
+    ["Final Round: James Patterson Novels", "Hope to Die, Old Mother Hubbard (plus more)"],
+    ["Final Round: Canadian National Holidays", "Boxing Day, Proclamation, Picnic Day"],
+    ["Final Round: Stage Names", "Katy Perry, Elton John, Drake"],
+    ["Final Round: Vitamins", "vitamin L, vitamin X, vitamin B3"],
+    ["Final Round: Cats in the Musical Cats", "Vagabond Prince, Old Deuteronomy"],
+    ["Final Round: Has an Exoskeleton", "crocodile, cobra, lobster"],
+    ["Final Round: Boy Scout Merit Badges", "Pokémon Go, Camping, Disabilities Awareness"],
+    ["Final Round: Lunchables", "Mexican Style Chicken Tacos, Chicken Pizza, Extra Cheesy Pizza"],
+    ["Final Round: Gluten-Free", "Sour cream, Skittles, Cottage cheese"],
+    ["Final Round: Lyrics in Billy Joel's We Didn't Start the Fire", "Buddy Holly, Ben Hur, space monkey, Mofia"],
+    ["Final Round: Scary Stories to Tell in the Dark", "\"The Hook\", \"May I Carry Your Basket?\", \"That's No Moon\""],
+    ["Final Round: Boat-Related Occupations", "skipper, coxswain, pinsetter"],
+    ["Final Round: Olsen Twins Movies", "To Grandmother's House We Go, Twinning, Mary-Kate and Ashley Rock Switzerland"],
+    ["Final Round: Pulitzer Prize Categories", "News Entertainment Program, History, Investigative Reporting"],
+    ["Final Round: Overwatch Characters", "D.Va, Gorilla Man, Symmetra"],
+    ["Final Round: Car Engine Parts", "flywheel, crankshaft (plus more)"],
+    ["Final Round: Characters Snapped Away in Avengers: Infinity War", "Black Panther, Hawkeye, Winter Soldier"],
+    ["Final Round: People Who Have Walked on the Moon", "Eugene Cernan, Buzz McCallister, Charles Duke"],
+    ["Final Round: The Greek Muses", "Thalia of Comedy, Thespia of Theater, Erato of Lyric Poetry"],
+    ["Final Round: Career Cards in The Game of Life", "Defense Specialist, Explorer, Singer"],
+    ["Final Round: Egyptian Gods & Goddesses", "Hestia, Juno, Ra"],
+    ["Final Round: Major Greenhouse Gases", "Tetrafluoromethane, Diatomic Nitrogen, Acetylene"],
+    ["Final Round: Stranger Things Characters", "Max Mayfield, Elliot Taylor, The Demogorgon"],
+    ["Final Round: Yogurt Brands", "Icelandic Provisions, Dannon, Fage"],
+    ["Final Round: Ranks of Organisms in Taxonomy", "County, Group, Brand"],
+    ["Final Round: Detective on a Law & Order Show", "Det. Jessica Fletcher, Det. Fin Tutuola, Det. Lennie Briscoe"],
+    ["Final Round: Locations in Game of Thrones", "Winterfell, Brandos, The Wall"],
+    ["Final Round: Metamorphic Rocks", "slate, clay (plus more)"],
+    ["Final Round: Parts of an Animal Cell", "Amniotic sac, Cell membrane, Impulse inhibitors"],
+    ["Final Round: Root Vegetables & Tubers", "turmeric, ginseng, radishes"],
+    ["Final Round: Never Married", "Jane Austen, Sir Isaac Newton, Henry VIII"],
+    ["Final Round: Dairy Products", "tofu, ghee, kefir"],
+    ["Final Round: Taller Than The Eiffel Tower", "The Great Pyramid of Giza, The Kingdom Clock Tower, The Wash"],
+    ["Final Round: Star Trek Captains", "Philippa Georgiou, Malcolm \"Mal\" Reynolds, Kathryn Janeway"],
+    ["Final Round: Countries Bordering the Indian Ocean", "Tanzania, Australia, Madagascar"],
+    ["Final Round: Books Written in the First Person", "The Scarlet Letter, To Kill a Mockingbird (plus more)"],
+    ["Final Round: Animals Statistically Likely to Outlive a Moose", "giraffe, dove, baboon"],
+    ["Final Round: Animals With More Than Two Eyes", "praying mantis, scallops, box jellyfish"],
+    ["Final Round: Kama Sutra Chapters", "On Personal Adornment, On Kissing, On Structurally Sound Surfaces"],
+    ["Final Round: Disney Animated Movies", "Tangled, Moana, The Swan Princess"],
+    ["Final Round: Cat Breeds", "Russian Blue, Maine Coon, Scottish Fold"],
+    ["Final Round: Muscles in the Human Body", "reticulum, rectus abdominis, delphinus"],
+    ["Final Round: Sesame Street Residents", "Aloysius Snuffleupagus, Penny Proud, Oscar the Grouch"],
+    ["Final Round: Quadrilaterals", "kite, tetrahedron, pentagon"],
+    ["Final Round: Nobel Prize Winning Scientists", "Charles Darwin, Alexander Fleming, Niels Bohr"],
+
+    // === FINAL ROUND QUESTIONS II ===
+    ["Final Round: Monsters Who Fought Godzilla", "King Ghidorah, Gigan, Megadeth"],
+    ["Final Round: Synchronized Swimming Positions", "The twisted lunge, The bucking bronco, The Capricorn"],
+    ["Final Round: Caffeinated Beverages", "Pibb Xtra, Sunkist (plus more)"],
+    ["Final Round: Dating Apps", "Heads Up!, Hinge, Tinder"],
+    ["Final Round: Tony Award Winners for Best Musical", "The Book of Mormon, Monty Python's Spamalot, Mary Poppins"],
+    ["Final Round: Programming Languages", "BB-8, MIB, Skrull"],
+    ["Final Round: Disney Villains", "Makunga, Madame Medusa, Ursula"],
+    ["Final Round: Words in the Preamble of the U.S. Constitution", "hungry, impeachment, friendship"],
+    ["Final Round: 8 Most Common English Letters", "M, S, E"],
+    ["Final Round: Animals With Stripes", "numbat, tabby cat, bongo"],
+    ["Final Round: Clouds", "cirrostratus, altostratus, stratostratus"],
+    ["Final Round: Countries on the Equator", "Uganda, Saudi Arabia (plus more)"],
+    ["Final Round: Multiples of 8", "112, 96, 88"],
+    ["Final Round: Roof Shapes", "Dormer, Meadow, Maidenhead"],
+    ["Final Round: Crayola Crayon Colors", "Liver, Purple Heart, Fresh Cut Grass"],
+    ["Final Round: States in India", "Tripura, Goa, Timor"],
+    ["Final Round: Mediterranean Islands", "Rhodes, Sicily, Cotillard"],
+    ["Final Round: Punctuation Marks", "inverted comma, gerund, semi-period"],
+    ["Final Round: Cruciferous Vegetables", "turnip, squash, Brussels sprouts"],
+    ["Final Round: Human Body Systems", "Abiotic system, Immune system, Carburetor system"],
+    ["Final Round: Human Hormones", "Estrogen, Ibprofen (plus more)"],
+    ["Final Round: Horse Breeds", "New York Boxer, Thoroughbred, London Jumper"],
+    ["Final Round: Geologic Time Periods", "Cambrian, Paleogene, Jurassic"],
+    ["Final Round: Prepositions", "during, its, that"],
+    ["Final Round: Former British Colonies", "India, Ethiopia, Iran"],
+    ["Final Round: Things From the Song My Favorite Things", "Cool autumn breezes, Small button noses, Sleigh bells"],
+    ["Final Round: Marie Kondo's Rules of Tidying", "\"Tidy every space twice\", \"Finish discarding first\", \"Tidy by category, not by location\""],
+    ["Final Round: Numbers That Divide Into 54", "12, 10, 1"],
+    ["Final Round: Newspaper Comic Strips", "Fox Trot, Hagar the Horrible, Dennis the Menace"],
+    ["Final Round: Monsters Mentioned in The Monster Mash", "Witches, Dracula (plus more)"],
+    ["Final Round: Palindromes", "My gym, rotator, racecar"],
+    ["Final Round: Movies With A Werewolf", "K9, The Howling, Twilight"],
+    ["Final Round: Food Named After People", "Nachos, Sherry, Clementines"],
+    ["Final Round: Founding Members of NATO", "Mexico, Iceland, Russia"],
+    ["Final Round: Kübler-Ross Five Stages of Grief", "gambling, gloominess, addiction"],
+    ["Final Round: Human Blood Types", "O+, P-, A-"],
+    ["Final Round: Died by Beheading", "Maximilien Robespierre, Medusa, Marie Antoinette"],
+    ["Final Round: Andy Warhol Art Pieces", "Silver Brando, Mickey Mouse, Mick Jagger"],
+    ["Final Round: Arthropods", "beetle, oyster, crab"],
+    ["Final Round: German Composers", "Pyotr Ilyich Tchaikovsky, George Frideric Handel, Hans Zimmer"],
+    ["Final Round: Coca-Cola Brands", "Dunkin' Donuts Original Iced Coffee, Smartwater (plus more)"],
+    ["Final Round: Training Exercises in Rocky Movies", "Chasing a Chicken, Tearing up Carpet, Carrying Log on Shoulders"],
+    ["Final Round: Dog Food Brands", "American Journey, Kibbles 'n Bits, Iams"],
+    ["Final Round: Has More Than 6 Legs", "tick, shrimp, cockroach"],
+    ["Final Round: Baking Tools", "distractor, Florence flask, suction tip"],
+    ["Final Round: Old Testament Books", "Lamentations, Jude, 1 Chronicles"],
+    ["Final Round: Mark Twain Characters", "Matilda Wormwood, Binx Bolling, Miss Trunchbull"],
+    ["Final Round: Knights of the Round Table", "Sir Malfoy, Sir Pettigrew, Sir Umbridge"],
+    ["Final Round: Chronicles of Narnia Books", "New Moon, Breaking Dawn (plus more)"],
+    ["Final Round: One-Term U.S. Presidents", "John Adams, Jimmy Carter, John Quincy Adams"],
+
+    // === FINAL ROUND QUESTIONS III ===
+    ["Final Round: Matrix Characters", "Sphinx, The Plague, Apoc"],
+    ["Final Round: States of New England", "Boston, Maine, Maryland"],
+    ["Final Round: Always Happen on a Sunday", "Federal Election Day (Germany), Saint Patrick's Day, Federal Election Day (Russia)"],
+    ["Final Round: Born in South Africa", "Sodapoppin, Halle Berry, Shakira"],
+    ["Final Round: Agatha Christie Mysteries", "The Signs of the Zodiac, Shutter Island, Murder on Oceanic Airline"],
+    ["Final Round: Types of Lettuce", "coffee, greene, Boston"],
+    ["Final Round: Death Metal Subgenres", "diseasecore, melodic death metal, goregrind"],
+    ["Final Round: Monogamous Animals", "emperor penguins, dolphins, rabbits"],
+    ["Final Round: Love Stories Where They Don't End Up Together", "Harold and Maude, (500) Days of Summer, Knocked Up"],
+    ["Final Round: Roman Emperors", "Marcus Aurelius, Claudius, Caligula"],
+    ["Final Round: Films Scored by John Williams", "Raiders of the Lost Ark, Jurassic World, The Exorcist"],
+    ["Final Round: Contains Peanuts", "Snickers, 100 Grand Bar (plus more)"],
+    ["Final Round: Akira Kurosawa Films", "My Neighbor Totoro, Ikiru, Throne of Blood"],
+    ["Final Round: IKEA Products", "Salskicer spoon, Kit Har meatballs, Nasho drapes"],
+    ["Final Round: Moons of Jupiter", "Grace, Gharange, Elara"],
+    ["Final Round: WNBA Teams", "Washington D.C. Supremes, New York Liberty, Toronto Geese"],
+    ["Final Round: Butterfly Life Cycle Stages", "pupa, spore, chrysalis"],
+    ["Final Round: Walking Dead Characters", "Stan Rizzo, Glenn Rhee, Michonne"],
+    ["Final Round: Adult Swim Cartoons", "Disenchantment, Frisky Dingo, BoJack Horseman"],
+    ["Final Round: Dungeons & Dragons Abilities", "charisma, intelligence, optimism"],
+    ["Final Round: Common Varieties of Fig", "Brown Turkey, Norseman, Kadota"],
+    ["Final Round: Queen Songs", "\"We Will Rock You\", \"Under Pressure\", \"Radio Ga Ga\""],
+    ["Final Round: Movies About Time Travel", "From Dusk Till Dawn, Back to the Future (plus more)"],
+    ["Final Round: Roald Dahl Books", "Charlie and Grandpa Leave Home, Where the Sidewalk Ends, The Invention of Hugo Cabret"],
+    ["Final Round: Anne Rice Novels", "Blood Meridian, Interview with the Vampire, Blood Canticle"],
+    ["Final Round: Actors in Sharknado 1-5", "Mr. T, William Shatner, Jerry Springer"],
+    ["Final Round: Snoopy's Siblings", "Marbles, Andy, Belle"],
+    ["Final Round: Aesop's Fables", "The Prince and the Pauper, The Fisherman and the Little Fish, The Squid and the Whale"],
+    ["Final Round: Leap Years", "1989, 2018, 2010"],
+    ["Final Round: Poems That Rhyme", "\"The Road Not Taken\" by Robert Frost, \"Jabberwocky\" by Lewis Carroll, \"Doctor Faustus\" by Christopher Marlowe"],
+    ["Final Round: Beatles' Songs", "\"Let it Be\", \"Hello Goodbye\", \"Love Shock\""],
+    ["Final Round: Annette Funicello Movies", "Bikini Dogs, Psycho Bikini Party, Two Piece Bucket Party"],
+    ["Final Round: States with Panhandles", "Texas, Oregon, Idaho"],
+
+    // === SECRET ENDINGS ===
+    ["Secret Ending - Father's Hat: What song from Godspell?", "Day by Day"],
+    ["Secret Ending - Father's Hat: Home planet of Mork?", "Ork"],
+    ["Secret Ending - Father's Hat: Care Bear with rainbow on tummy?", "Cheer Bear"],
+    ["Secret Ending - Father's Hat: Dr. Seuss book with sour kangaroo?", "Horton Hears a Who!"],
+    ["Secret Ending - Father's Hat: Ice cream NOT made in 1985?", "Cold Stone Creamery"],
+    ["Secret Ending - Father's Hat: Country Anne Hathaway inherits in Princess Diaries?", "Genovia"],
+    ["Secret Ending - Father's Hat: Character NOT an X-Man?", "Griffin"],
+    ["Secret Ending - Father's Hat: Ernest Hemingway's nickname?", "Papa"],
+    ["Secret Ending - Father's Hat: Decade born with Post-it Notes?", "1970s"],
+    ["Secret Ending - Father's Hat: Bad guy \"Murky Dismal\" from what cartoon?", "Rainbow Brite"],
+    ["Secret Ending - Father's Hat: Board game with electronic buzzer?", "Taboo"],
+    ["Secret Ending - Father's Hat: Babar's wife's name?", "Celeste"],
+    ["Secret Ending - Father's Hat: TV western with loving father-son relationship?", "The Rifleman"],
+    ["Secret Ending - Father's Hat: Skateboarder leading with right foot?", "goofy-foot"],
+    ["Secret Ending - Father's Hat: Transformer that turns into a dinosaur?", "Grimlock"],
+    ["Secret Ending - Father's Hat: Detective duo from Miami Vice?", "Tubbs & Crockett"],
+    ["Secret Ending - Father's Hat: Alexander the Great's mentor?", "Aristotle"],
+    ["Secret Ending - Father's Hat: Host of TV's Reading Rainbow?", "LeVar Burton"],
+    ["Secret Ending - Mother's Wig: Astronaut orbiting Earth in 1961?", "John Glenn"],
+    ["Secret Ending - Mother's Wig: Movie star who screamed at dry cleaner about wire hangers?", "Joan Crawford"],
+    ["Secret Ending - Mother's Wig: NBA team in 1955?", "Minneapolis Lakers"],
+    ["Secret Ending - Grandpappy's Glasses: Animal with longest neck?", "giraffe"],
+    ["Secret Ending - Grandpappy's Glasses: Date of Halloween?", "Oct 31st"],
+    ["Secret Ending - Grandpappy's Glasses: Celestial body that revolves around Earth?", "Moon"]
+];
+
+// ========================================
+// Search Engine
+// ========================================
+document.getElementById('count').textContent = questions.length + ' questions loaded';
+
+function search() {
+    var input = document.getElementById('searchInput');
+    var query = input.value.toLowerCase().trim();
+    var resultsDiv = document.getElementById('results');
+    var statsDiv = document.getElementById('stats');
+    
+    if (query.length < 2) {
+        resultsDiv.innerHTML = '<div class="no-match">Type at least 2 characters to search</div>';
+        statsDiv.textContent = '';
+        return;
+    }
+    
+    var matches = [];
+    for (var i = 0; i < questions.length; i++) {
+        var question = questions[i][0].toLowerCase();
+        if (question.indexOf(query) !== -1) {
+            matches.push(questions[i]);
         }
-        let combined = '// COMBO PAYLOAD – ALL HACKS IN ONE\n(function(){\n';
-        checks.forEach(chk => {
-            const codeEl = document.getElementById(chk.value);
-            if (codeEl) {
-                let raw = codeEl.innerText;
-                // remove outer (function(){...})(); wrappers to combine
-                raw = raw.replace(/^\(function\(\)\{/, '').replace(/\}\)\);?$/, '');
-                combined += '  // --- ' + chk.value + ' ---\n  ' + raw + '\n';
-            }
-        });
-        combined += '  console.log("🔥 COMBO EXECUTED – ALL SYSTEMS GO");\n})();';
-        document.getElementById('comboOutput').innerText = combined;
     }
-
-    // Update bookmarklet
-    function updateBookmarklet() {
-        const input = document.getElementById('bookmarkInput');
-        let val = input.value.trim();
-        if (!val.startsWith('javascript:')) val = 'javascript:' + val;
-        const link = document.getElementById('bookmarkletLink');
-        link.href = val;
-        link.innerText = '⭐ DRAG ME (UPDATED)';
-        // Also show mini toast
-        const toast = document.getElementById('toast');
-        toast.innerText = '🔖 Bookmarklet updated!';
-        toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-            toast.innerText = '✅ Copied to clipboard!';
-        }, 2000);
+    
+    if (matches.length === 0) {
+        resultsDiv.innerHTML = '<div class="no-match">❌ No matches found for "' + input.value + '"</div>';
+        statsDiv.textContent = '';
+        return;
     }
+    
+    var html = '';
+    var maxShow = Math.min(matches.length, 30);
+    for (var j = 0; j < maxShow; j++) {
+        html += '<div class="result">';
+        html += '<div class="q">' + matches[j][0] + '</div>';
+        html += '<div class="a">' + matches[j][1] + '</div>';
+        html += '</div>';
+    }
+    
+    if (matches.length > 30) {
+        html += '<div class="no-match">Showing 30 of ' + matches.length + ' matches. Refine your search.</div>';
+    }
+    
+    resultsDiv.innerHTML = html;
+    statsDiv.textContent = 'Found ' + matches.length + ' match(es)';
+}
 
-    // Auto-run demo: pre-check all
-    window.onload = function() {
-        document.querySelectorAll('.payload-chk').forEach(c => c.checked = true);
-        buildCombo();
-    };
+function clearSearch() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('results').innerHTML = '<div class="no-match">Type at least 2 characters to search</div>';
+    document.getElementById('stats').textContent = '';
+    document.getElementById('searchInput').focus();
+}
 
-    // Expose eval for the execute buttons
-    console.log('🏴‍☠️ SCHOOLCHEATS NEXUS LOADED – HACK THE PLANET');
+// Initial state
+document.getElementById('results').innerHTML = '<div class="no-match">Type at least 2 characters to search</div>';
 </script>
+
 </body>
 </html>
